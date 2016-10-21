@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1.
+        User List
+    ul
+        each user, i in userlist
+            li
+                p= "user id: " + user._id
+                p= "username: " + user.username
+                p= "email: " + user.email

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1= title
+    form#formAddNavigation(name="addnavigation",method="post",action="addnavigation")
+        input#inputNavigationSpeedOBD(type="text", placeholder="speed_obd", name="speed_obd")
+        input#inputNavigationSpeedLimit(type="text", placeholder="speed_limit", name="speed_limit")
+        input#inputNavigationGPS(type="text", placeholder="GPS", name="GPS")
+        input#inputNavigationDate(type="text", placeholder="date", name="date")
+        input#inputNavigationUserID(type="text", placeholder="user_id", name="user_id")
+        input#inputNavigationArduinoID(type="text", placeholder="arduino_id", name="arduino_id")
+        button#btnSubmit(type="submit") submit

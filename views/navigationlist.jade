@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1.
+        Navigation List
+    ul
+        each navigation, i in navigationlist
+            li
+                p= "OBD speed: " + navigation.speed_obd
+                p= "Speed limit: " +  navigation.speed_limit
+                p= "GPS coordinates: " +  navigation.GPS
+                p= "Date/Time: " +  navigation.date
+                p= "User Id: " +  navigation.user_id
+                p= "Arduino Id: " +  navigation.arduino_id

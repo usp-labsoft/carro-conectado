@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1.
+        Arduino List
+    ul
+        each arduino, i in arduinolist
+            li
+                p= "arduino id: " + arduino._id
+                p= "owner: " + arduino.owner
+                a(href="deleteArduino?id="+arduino._id) Excluir

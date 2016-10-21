@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1= title
+    form#formAddArduino(name="addarduino",method="post",action="addarduino")
+        input#inputOwner(type="text", placeholder="owner username", name="owner")
+        button#btnSubmit(type="submit") submit
