@@ -4,4 +4,20 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    nav
+      h1 Carro Conectado
+      ul
+        li 
+          a(href='/users/userlist') User List
+        li 
+          a(href='/users/newuser') New User
+        li 
+          a(href='/arduino/arduinolist') Arduino List
+        li 
+          a(href='/arduino/newarduino') New Arduino
+        li
+          a(href='/navigation/navigationlist') Navigation List
+        li
+          a(href='/navigation/newnavigation') New Navigation
+
     block content

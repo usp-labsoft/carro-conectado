@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    h1= title
+    h3= title
     form#formAddNavigation(name="addnavigation",method="post",action="addnavigation")
         input#inputNavigationSpeedOBD(type="text", placeholder="speed_obd", name="speed_obd")
         input#inputNavigationSpeedLimit(type="text", placeholder="speed_limit", name="speed_limit")
