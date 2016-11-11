@@ -9,3 +9,6 @@ block content
                 p= "user id: " + user._id
                 p= "username: " + user.username
                 p= "email: " + user.email
+                p= "quantidade de vezes acima do limite: " + user.over_speed_count
+                p= "quantidade total de dados de navegação: " + user.navigation_data_count
+                p= "porcentagem de vezes acima do limite: " + user.over_speed_count/user.navigation_data_count
