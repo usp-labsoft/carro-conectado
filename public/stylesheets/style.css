@@ -1,8 +1,42 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'D Sans', serif;
+  background: lightgrey;
+   background: url(http://crossroadsautorepairllc.com/communities/8/000/001/355/468//images/3084445.png) no-repeat top center;
 }
 
 a {
-  color: #00B7FF;
+  color: darkgreen;
 }
+
+ul li {
+    padding: 2px;
+}
+
+#titulo{
+	color: darkgreen;
+}
+
+#topBar{
+   position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   height:60px;
+   background-color:black;
+}
+
+a:link, a:visited {
+    background-color: darkgreen;
+    color: lightgrey;
+    padding: 1px 5px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: green
+}
+
