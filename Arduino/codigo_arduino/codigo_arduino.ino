@@ -16,9 +16,8 @@ void loop() { // run over and over
     {
       Serial.write(stringToWrite[j]);   // Push each char 1 by 1 on each loop pass
     }
-    Serial.write(sizeof(speeds)/ sizeof(int));
     i++;
-    if(i >= sizeof(speeds)/ sizeof(int)){i = 0;}
+    if(i == 70){i = 0;}
     delay(5*1000);
   }
 }
