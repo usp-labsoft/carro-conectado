@@ -18,6 +18,6 @@ void loop() { // run over and over
     }
     i++;
     if(i == 70){i = 0;}
-    delay(5*1000);
+    delay(15*1000);
   }
 }
