@@ -13,6 +13,10 @@ import android.util.Log;
 
 import com.example.goldenberg.carroconectado.HttpRequest.GetSpeedLimit;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 /**
  * Created by Goldenberg on 11/11/16.
  */
@@ -44,14 +48,17 @@ public class GPS_Service extends Service {
             public void onLocationChanged(Location location) {
                 String velOBD = intent.getStringExtra("velOBD");
                 Log.v("Bluetooth",velOBD);
-                String lat, lon, lat1, lon1;
+                String lat, lon, lat1, lon1, date;
                 lat = String.valueOf(location.getLatitude());
                 lon = String.valueOf(location.getLongitude());
                 lat1 = String.valueOf(location.getLatitude() + 0.0002);
                 lon1 = String.valueOf(location.getLongitude() + 0.0002);
+                date = new SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.US).format(location.getTime());
+
+                Log.v("Data", date);
 
                 System.out.println("Lat: " + location.getLatitude() + ", Lon: " + location.getLongitude() + " Vel: " + location.getSpeed());
-                new GetSpeedLimit().execute(lon, lat, lon1, lat1, velOBD,String.valueOf(location.getTime()));
+                new GetSpeedLimit().execute(lon, lat, lon1, lat1, velOBD, date);
 
 
                 //noinspection MissingPermission

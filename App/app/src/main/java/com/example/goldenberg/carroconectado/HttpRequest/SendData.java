@@ -25,7 +25,7 @@ public class SendData extends AsyncTask <String, Void, String> {
     public String sendNavData(HashMap<String,String> postDataParams){
         String response = null;
         try {
-            String API_URL = "http://192.168.1.52:3000/navigation/addnavigation";
+            String API_URL = "http://192.168.1.17:3000/navigation/addnavigation";
             URL url = new URL(API_URL);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setReadTimeout(10000);
