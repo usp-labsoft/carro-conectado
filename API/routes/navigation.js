@@ -56,7 +56,7 @@ router.post('/addnavigation', function(req, res) {
 
     navigation_collection.find({user_id: user_id}, { sort : { date : -1 } }, function(err, nav_docs){
         if(err) throw err;
-        if(nav_docs){
+        if(nav_docs && nav_docs.length > 0){
             var last_value = nav_docs[0];
             last_value.date = formatAsDate(last_value.date);
             var timeDiff = Math.abs(last_value.date.getTime() - date.getTime()) / 60000; // time difference in minutes
@@ -65,6 +65,9 @@ router.post('/addnavigation', function(req, res) {
             if(timeDiff > 1 || speedDiff > 3){
                 add = true;
             }
+        }
+        else{
+            add = true;
         }
 
         if(add){
