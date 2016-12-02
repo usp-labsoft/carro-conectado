@@ -10,4 +10,8 @@ Obtendo os dados de limite de velocidade, o aplicativo Android junta-os aos dado
 
 O servidor por sua vez faz uma análise para decidir se os dados devem ser salvos ou não. São salvos dados com mais de um minuto de diferença entre o último dado salvo para tal usuário ou caso tenha havido mudança de mais de 3km/h na velocidade em relação ao último dado. Código presente na pasta /API.
 
-Há uma interface simples, que permite ao administrador do sistema o cadastro de novos usuários, verificação dos usuários já existentes, com os dados estatísticos referentes à qualidade de sua conduta, cadastro de novos Arduinos (relacionando-os ao usuário ao qual tal Arduino pertence), e verificação das entradas de navegação registradas no banco de dados. Código também presente na pasta /API.
+Há uma interface simples, que permite ao administrador do sistema o cadastro de novos usuários, verificação dos usuários já existentes, com os dados estatísticos referentes à qualidade de sua conduta, cadastro de novos Arduinos (relacionando-os ao usuário ao qual tal Arduino pertence), e verificação das entradas de navegação registradas no banco de dados. Código também presente na pasta /API/views.
+
+Mapa de integração:
+
+![alt tag](mapa_integracao.png)
